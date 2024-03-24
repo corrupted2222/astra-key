@@ -3,8 +3,8 @@
 
 -- Instances:
 
-local ServiceName = "astra"
-local HubName = "Pandadevkit"
+local ServiceName = "Astra"
+local HubName = "astra"
 local KeyFile = "panda.txt"
 local SaveKey = true
 
