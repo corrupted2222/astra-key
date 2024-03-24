@@ -3,6 +3,63 @@
 
 -- Instances:
 
+local ServiceName = "astra"
+local HubName = "Pandadevkit"
+local KeyFile = "panda.txt"
+local SaveKey = true
+
+-- PANDA AUTH --
+local PandaAuth = loadstring(game:HttpGet('https://pandadevelopment.net/service_api/PandaAuthBeta2.lua'))()
+local Notify = loadstring(game:HttpGet("https://raw.githubusercontent.com/x9PSwiftz/Panda/main/Notification.lua"))()
+
+function RemoveKeyUI()
+	do
+		local keyui = game.CoreGui:FindFirstChild("key")
+		if keyui then
+			keyui:Destroy()
+		end
+	end
+end
+RemoveKeyUI()
+
+-- AUTO CHECK --
+if SaveKey and isfile(KeyFile) then
+	Submitkey()
+end
+
+
+-- IMPORTANT -----------------------
+local function RandomString(length)
+	local randomString = ""
+	for i = 1, length do
+		local randomNumber = math.random(97, 122)
+		randomString = randomString .. string.char(randomNumber)
+	end
+	return tostring(randomString)
+end
+
+Check = true
+local oldstring = ""
+spawn(function()
+	while Check do
+		local String = RandomString(10)
+		if String == oldstring then
+			while true do end
+		end 
+		if PandaAuth:GetLink("pandadevkit") == nil or PandaAuth:ValidateKey("pandadevkit", RandomString(10)) then
+			while true do end
+		end
+		oldstring = RandomString(10)
+		task.wait(2)
+	end
+end)
+
+-- This is important please dont delete it {
+setfenv(1,{})
+script = oldscript
+-- }
+
+
 local key = Instance.new("ScreenGui")
 local Frame = Instance.new("Frame")
 local UICorner = Instance.new("UICorner")
@@ -135,6 +192,21 @@ Submitkey.Font = Enum.Font.FredokaOne
 Submitkey.Text = "Submit Key"
 Submitkey.TextColor3 = Color3.fromRGB(255, 255, 255)
 Submitkey.TextSize = 18.000
+Submitkey.MouseButton1Click:Connect(function()
+	    pcall(function()
+        print("[ "..HubName.." ]".." Checking key..")
+        Notify.New("Checking key..", 2)
+        if PandaAuth:ValidateKey(ServiceName, object.TextBox.Text) then
+            print("[ "..HubName.." ]".." Key is correct: "..object.TextBox.Text)
+            Notify.New("Key is correct: "..object.TextBox.Text, 3)
+            PandaAuth:SaveKey(KeyFile, object.TextBox.Text)
+            RemoveKeyUI()
+            Script()
+        else
+            print("[ "..HubName.." ]".." Key is invalid!")
+            Notify.New("Key is invalid!", 3)
+        end
+end)
 
 UICorner_6.CornerRadius = UDim.new(0, 7)
 UICorner_6.Parent = Submitkey
