@@ -1,0 +1,186 @@
+-- Gui to Lua
+-- Version: 3.6
+
+-- Instances:
+
+local key = Instance.new("ScreenGui")
+local Frame = Instance.new("Frame")
+local UICorner = Instance.new("UICorner")
+local Icon = Instance.new("ImageLabel")
+local UICorner_2 = Instance.new("UICorner")
+local title = Instance.new("TextLabel")
+local KeyBox = Instance.new("TextBox")
+local UICorner_3 = Instance.new("UICorner")
+local UIStroke = Instance.new("UIStroke")
+local CopyKey = Instance.new("TextButton")
+local UICorner_4 = Instance.new("UICorner")
+local UIStroke_2 = Instance.new("UIStroke")
+local Discord = Instance.new("TextButton")
+local UICorner_5 = Instance.new("UICorner")
+local UIStroke_3 = Instance.new("UIStroke")
+local Submitkey = Instance.new("TextButton")
+local UICorner_6 = Instance.new("UICorner")
+local UIStroke_4 = Instance.new("UIStroke")
+
+-- Properties:
+
+key.Name = "key"
+key.Parent = game.Players.LocalPlayer:WaitForChild("PlayerGui")
+key.ZIndexBehavior = Enum.ZIndexBehavior.Sibling
+
+Frame.Parent = key
+Frame.BackgroundColor3 = Color3.fromRGB(20, 20, 20)
+Frame.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Frame.BorderSizePixel = 0
+Frame.Position = UDim2.new(0.278942585, 0, 0.330152661, 0)
+Frame.Size = UDim2.new(0, 400, 0, 146)
+
+UICorner.CornerRadius = UDim.new(0, 7)
+UICorner.Parent = Frame
+
+Icon.Name = "Icon"
+Icon.Parent = Frame
+Icon.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+Icon.BackgroundTransparency = 1.000
+Icon.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Icon.BorderSizePixel = 0
+Icon.Position = UDim2.new(0.0179999992, 0, 0.0233333334, 0)
+Icon.Size = UDim2.new(0, 40, 0, 40)
+Icon.Image = "http://www.roblox.com/asset/?id=16001410208"
+
+UICorner_2.CornerRadius = UDim.new(0, 6)
+UICorner_2.Parent = Icon
+
+title.Name = "title"
+title.Parent = Frame
+title.BackgroundColor3 = Color3.fromRGB(255, 255, 255)
+title.BackgroundTransparency = 1.000
+title.BorderColor3 = Color3.fromRGB(0, 0, 0)
+title.BorderSizePixel = 0
+title.Position = UDim2.new(0.1175, 0, 0.0233333595, 0)
+title.Size = UDim2.new(0, 231, 0, 39)
+title.Font = Enum.Font.FredokaOne
+title.Text = " Astra | Key System"
+title.TextColor3 = Color3.fromRGB(255, 255, 255)
+title.TextSize = 20.000
+title.TextXAlignment = Enum.TextXAlignment.Left
+
+KeyBox.Name = "KeyBox"
+KeyBox.Parent = Frame
+KeyBox.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+KeyBox.BorderColor3 = Color3.fromRGB(0, 0, 0)
+KeyBox.BorderSizePixel = 0
+KeyBox.Position = UDim2.new(0.0179999992, 0, 0.296000004, 5)
+KeyBox.Size = UDim2.new(0, 385, 0, 41)
+KeyBox.Font = Enum.Font.SourceSans
+KeyBox.PlaceholderColor3 = Color3.fromRGB(255, 255, 255)
+KeyBox.Text = " Key Goes Here...."
+KeyBox.TextColor3 = Color3.fromRGB(255, 255, 255)
+KeyBox.TextSize = 18.000
+KeyBox.TextXAlignment = Enum.TextXAlignment.Left
+
+UICorner_3.CornerRadius = UDim.new(0, 7)
+UICorner_3.Parent = KeyBox
+
+UIStroke.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke.Color = Color3.fromRGB(60, 60, 60)
+UIStroke.Parent = KeyBox
+
+CopyKey.Name = "Copy Key"
+CopyKey.Parent = Frame
+CopyKey.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+CopyKey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+CopyKey.BorderSizePixel = 0
+CopyKey.Position = UDim2.new(0.0179999992, 0, 0.656000018, 2)
+CopyKey.Size = UDim2.new(0, 185, 0, 35)
+CopyKey.Font = Enum.Font.FredokaOne
+CopyKey.Text = "Copy Key"
+CopyKey.TextColor3 = Color3.fromRGB(255, 255, 255)
+CopyKey.TextSize = 18.000
+
+UICorner_4.CornerRadius = UDim.new(0, 7)
+UICorner_4.Parent = CopyKey
+
+UIStroke_2.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_2.Color = Color3.fromRGB(60, 60, 60)
+UIStroke_2.Parent = CopyKey
+
+Discord.Name = "Discord"
+Discord.Parent = Frame
+Discord.BackgroundColor3 = Color3.fromRGB(114, 137, 218)
+Discord.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Discord.BorderSizePixel = 0
+Discord.Position = UDim2.new(0.605000019, 0, 0.0189999994, 3)
+Discord.Size = UDim2.new(0, 150, 0, 35)
+Discord.Font = Enum.Font.FredokaOne
+Discord.Text = "Discord Server"
+Discord.TextColor3 = Color3.fromRGB(255, 255, 255)
+Discord.TextSize = 18.000
+
+UICorner_5.CornerRadius = UDim.new(0, 7)
+UICorner_5.Parent = Discord
+
+UIStroke_3.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_3.Color = Color3.fromRGB(179, 196, 255)
+UIStroke_3.Parent = Discord
+
+Submitkey.Name = "Submit key"
+Submitkey.Parent = Frame
+Submitkey.BackgroundColor3 = Color3.fromRGB(30, 30, 30)
+Submitkey.BorderColor3 = Color3.fromRGB(0, 0, 0)
+Submitkey.BorderSizePixel = 0
+Submitkey.Position = UDim2.new(0.51700002, 0, 0.656000018, 2)
+Submitkey.Size = UDim2.new(0, 185, 0, 35)
+Submitkey.Font = Enum.Font.FredokaOne
+Submitkey.Text = "Submit Key"
+Submitkey.TextColor3 = Color3.fromRGB(255, 255, 255)
+Submitkey.TextSize = 18.000
+
+UICorner_6.CornerRadius = UDim.new(0, 7)
+UICorner_6.Parent = Submitkey
+
+UIStroke_4.ApplyStrokeMode = Enum.ApplyStrokeMode.Border
+UIStroke_4.Color = Color3.fromRGB(60, 60, 60)
+UIStroke_4.Parent = Submitkey
+
+-- Scripts:
+
+local function BEVRX_fake_script() -- Frame.Dragify 
+	local script = Instance.new('LocalScript', Frame)
+
+	local UIS = game:GetService('UserInputService')
+	local frame = script.Parent
+	local dragToggle = nil
+	local dragSpeed = 0.25
+	local dragStart = nil
+	local startPos = nil
+	
+	local function updateInput(input)
+		local delta = input.Position - dragStart
+		local position = UDim2.new(startPos.X.Scale, startPos.X.Offset + delta.X,
+			startPos.Y.Scale, startPos.Y.Offset + delta.Y)
+		game:GetService('TweenService'):Create(frame, TweenInfo.new(dragSpeed), {Position = position}):Play()
+	end
+	
+	frame.InputBegan:Connect(function(input)
+		if (input.UserInputType == Enum.UserInputType.MouseButton1 or input.UserInputType == Enum.UserInputType.Touch) then 
+			dragToggle = true
+			dragStart = input.Position
+			startPos = frame.Position
+			input.Changed:Connect(function()
+				if input.UserInputState == Enum.UserInputState.End then
+					dragToggle = false
+				end
+			end)
+		end
+	end)
+	
+	UIS.InputChanged:Connect(function(input)
+		if input.UserInputType == Enum.UserInputType.MouseMovement or input.UserInputType == Enum.UserInputType.Touch then
+			if dragToggle then
+				updateInput(input)
+			end
+		end
+	end)
+end
+coroutine.wrap(BEVRX_fake_script)()
